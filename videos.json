@@ -3,12 +3,23 @@
     "title": "Autumn (1930)",
     "youtubeId": "RXaL-qe1PPY",
     "year": 1930,
-    "note": "Silly Symphony colorization — Picture Orchard"
+    "note": "Silly Symphony colorization — Picture Orchard",
+    "platform": "youtube"
   },
   {
     "title": "Halloween - Skeleton Dance Clip (colorized)",
     "youtubeId": "9xPRl9cGd7A",
     "year": 1929,
-    "note": "Silly Symphony colorization — Picture Orchard"
+    "note": "Silly Symphony colorization — Picture Orchard",
+    "platform": "youtube"
+  },
+  {
+    "title": "BIG Tricks and Treats",
+    "platform": "rumble",
+    "rumbleEmbedId": "v7fdck0",
+    "rumbleUrl": "https://rumble.com/shorts/v7hjphi",
+    "vertical": true,
+    "year": 2026,
+    "note": "Bigfoot's Weekend cartoon — Rumble short"
   }
 ]

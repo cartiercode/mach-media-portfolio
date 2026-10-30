@@ -16,7 +16,8 @@
     var title = escapeHtml(item.title || "Untitled");
     var year = item.year != null ? escapeHtml(item.year) : "";
     var note = item.note ? escapeHtml(item.note) : "";
-    var id = item.youtubeId || "";
+    var isRumble = item.platform === "rumble";
+    var id = isRumble ? item.rumbleEmbedId || "" : item.youtubeId || "";
     var isPlaceholder = !id || id === "PLACEHOLDER";
 
     var media;
@@ -25,12 +26,15 @@
         '<div class="video-frame" role="img" aria-label="Video coming soon">' +
         '<div class="placeholder">video coming soon</div></div>';
     } else {
-      var src =
-        "https://www.youtube-nocookie.com/embed/" +
-        encodeURIComponent(id) +
-        "?rel=0";
+      var src = isRumble
+        ? "https://rumble.com/embed/" + encodeURIComponent(id) + "/"
+        : "https://www.youtube-nocookie.com/embed/" +
+          encodeURIComponent(id) +
+          "?rel=0";
       media =
-        '<div class="video-frame">' +
+        '<div class="video-frame' +
+        (item.vertical ? " video-frame--vertical" : "") +
+        '">' +
         '<iframe src="' +
         src +
         '" title="' +
